@@ -48,7 +48,7 @@ public class Course {
   public Program getProgram() {
     return program;
   }
-
+// possibly an error
   public void setDepartment(Program department) {
     this.program = program;
   }
