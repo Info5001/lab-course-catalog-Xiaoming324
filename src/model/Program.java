@@ -5,8 +5,6 @@ public class Program {
     String nameOfHead;
     CourseCatalog programCourseCatalog;
 
-
-
     public Program(String name, String head) {
         this.name = name;
         this.nameOfHead = head;
@@ -38,7 +36,20 @@ public class Program {
     }
 
     public void printProgramDetails(){
-        // TODO print program details
+        System.out.println("");
+        System.out.println("Program " + name);
+        System.out.println("Managed by " + nameOfHead);
+        System.out.println("------------------");
+        System.out.println("Required courses: ");
+        for (Course reqCourse: programCourseCatalog.getRequiredCourse()){
+            reqCourse.printCourseInfo();
+        }
+        System.out.println("------------------");
+        System.out.println("Elective courses: ");
+        for (Course eleCourse: programCourseCatalog.getElectiveCourse()){
+            eleCourse.printCourseInfo();
+        }
+
     }
 
 
